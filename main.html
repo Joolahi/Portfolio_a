@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joonas Lahti</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="background"></div>
+    
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">joonas<span>.</span></div>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fi">FI</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a onclick="closeMenu()" data-i18n="nav.home" href="main.html"></a>
+            <a onclick="closeMenu()" data-i18n="nav.work"></a>
+            <a onclick="closeMenu()" data-i18n="nav.skills"></a>
+            <a onclick="closeMenu()" data-i18n="nav.contact" href="contact.html"></a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 data-i18n="hero.greeting"></h1>
+                    <div class="subtitle" data-i18n="hero.subtitle"></div>
+                    <p data-i18n="hero.description"></p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" data-i18n="hero.cta1"></button>
+                        <button class="btn btn-secondary" data-i18n="hero.cta2"></button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-i18n="stats.projects"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label" data-i18n="stats.years"></span>
+                        </div> 
+                        <!--
+                        <div class="stat-item">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label" data-i18n="stats.clients"></span>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-stack">
+                        <div class="tech-card">
+                            <h3>Frontend</h3>
+                            <p>React, TypeScript, JavaScript, HTML</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Backend</h3>
+                            <p>Node.js, Python, C#, .NET</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Databases</h3>
+                            <p>PostgreSQL, MongoDB, SQL</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3 data-i18n="tech.other"></h3>
+                            <p>Git, Docker, AWS, CI/CD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>
