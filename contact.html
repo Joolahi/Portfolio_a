@@ -1,92 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joonas Lahti</title>
-    <link rel="stylesheet" href="styles/contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch - Contact information and form">
+  <title>Contact - Software Developer</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="background"></div>
-    
-    <header class="navbar">
-        <div class="nav-left">
-            <a href="main.html" class="logo">joonas<span>.</span></a>
-            <div class="lang-switcher">
-                <button class="lang-btn" data-lang="fi">FI</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav class="nav-links" id="navLinks">
-            <a href="main.html" data-i18n="nav.home"></a>
-            <a href="#" onclick="closeMenu()" data-i18n="nav.work"></a>
-            <a href="#" onclick="closeMenu()" data-i18n="nav.skills"></a>
-            <a href="contact.html" class="active" onclick="closeMenu()" data-i18n="nav.contact"></a>
-        </nav>
-    </header>
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="bg-grid"></div>
+  </div>
 
+  <!-- Navigation -->
+  <nav>
     <div class="container">
-        <section class="contact-section">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h1 data-i18n="contact.title"></h1>
-                    <p data-i18n="contact.description"></p>
-                    
-                    <div class="contact-methods">
-                        <a class="contact-method" href="mailto:lahti.joonas@outlook.com">
-                            <div class="contact-method-icon">📧</div>
-                            <div class="contact-method-text">
-                                <h3 data-i18n="contact.email"></h3>
-                                <span>lahti.joonas@outlook.com</span>
-                            </div>
-                        </a>
-                        
-                        <a class="contact-method"  href="https://www.linkedin.com/in/joonas-lahti-279766258" target="_blank">
-                            <div class="contact-method-icon">💼</div>
-                            <div class="contact-method-text">
-                                <h3>LinkedIn</h3>
-                                <span>linkedin.com/in/joonaslahti</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://www.github.com/Joolahi" target="_blank" class="contact-method">
-                            <div class="contact-method-icon">💻</div>
-                            <div class="contact-method-text">
-                                <h3>GitHub</h3>
-                                <span>github.com/joolahi</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" data-i18n="contact.form.name"></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" data-i18n="contact.form.email"></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" data-i18n="contact.form.message"></label>
-                            <textarea id="message" name="message" required placeholder="Tämä ominaisuus ei ole käytössä! 😊"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn" data-i18n="contact.form.send"></button>
-                    </form>
-                </div>
-            </div>
-        </section>
+      <a href="index.html" class="logo">&lt;/dev&gt;</a>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <script type="module" src="/scripts/main.js"></script>
+  </nav>
+
+  <!-- Contact Section -->
+  <section style="padding-top: 150px;">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">// Let's work together</p>
+
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div style="margin-bottom: 2rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Let's Connect</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem;">
+              I'm always interested in hearing about new opportunities, collaborations, or just having 
+              a conversation about technology and development. Feel free to reach out!
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <a href="mailto:lahti.joonas@outlook.com">lahti.joonas@outlook.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <a href="tel:+358401234567">+358 40 4113163</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Location</h3>
+              <p>Finland</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/joonas-lahti-279766258" target="_blank" rel="noopener noreferrer">Connect with me</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-details">
+              <h3>GitHub</h3>
+              <a href="https://github.com/Joolahi" target="_blank" rel="noopener noreferrer">View my repositories</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your project or idea..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+
+          <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;">
+            <i class="fas fa-info-circle" style="color: var(--accent);"></i>
+            I typically respond within 24-48 hours
+          </p>
+        </div>
+      </div>
+
+      <!-- Additional Information -->
+      <div style="margin-top: 5rem;">
+        <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--text-primary); text-align: center;">
+          Why Work With Me?
+        </h3>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h4 class="card-title">Goal-Oriented</h4>
+            <p class="card-description">
+              I approach every project with clear objectives and a commitment to delivering results 
+              that exceed expectations. My focus is on creating solutions that truly solve problems.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🤝</div>
+            <h4 class="card-title">Collaborative</h4>
+            <p class="card-description">
+              Strong communicator who values teamwork and believes the best solutions come from 
+              collaboration. I work well with diverse teams and stakeholders.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h4 class="card-title">Efficient</h4>
+            <p class="card-description">
+              I write clean, maintainable code and follow best practices to ensure projects are 
+              delivered on time without compromising quality or scalability.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📚</div>
+            <h4 class="card-title">Continuous Learner</h4>
+            <p class="card-description">
+              Technology evolves rapidly, and I'm committed to staying current. I actively learn 
+              new tools and techniques to bring the best solutions to every project.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">💡</div>
+            <h4 class="card-title">Problem Solver</h4>
+            <p class="card-description">
+              Not afraid to tackle complex challenges. I approach problems analytically and 
+              creatively to find elegant solutions that work.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🔒</div>
+            <h4 class="card-title">Reliable</h4>
+            <p class="card-description">
+              I am conscientious and reliable, 
+              I take responsibility for my work and ensure that projects are completed within the agreed time frame.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div style="margin-top: 5rem; background: var(--bg-secondary); padding: 4rem 3rem; border-radius: 8px; border: 1px solid rgba(169, 29, 58, 0.2); text-align: center;">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+          Ready to Start a Project?
+        </h3>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+          Whether you have a specific project in mind or just want to explore possibilities, 
+          I'd love to hear from you. Let's create something amazing together.
+        </p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:your.email@example.com" class="btn btn-primary">
+            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/joonas-lahti-279766258" target="_blank" class="btn btn-secondary">
+            <i class="fab fa-linkedin" style="margin-right: 0.5rem;"></i>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Availability Status -->
+      <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(169, 29, 58, 0.1); border-radius: 8px; border: 1px solid rgba(169, 29, 58, 0.3);">
+        <div style="display: inline-flex; align-items: center; gap: 1rem;">
+          <div style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--text-primary);">
+            Currently available for new opportunities
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">© 2025 Joonas</p>
+        <div class="social-links">
+          <a href="https://github.com/Joolahi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/joonas-lahti-279766258/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:lahti.joonas@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>

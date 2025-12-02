@@ -1,86 +1,139 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joonas Lahti</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Software Developer specializing in application development and data analytics">
+  <title>Portfolio - Software Developer</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="scripts/translations.js"></script>
 </head>
 <body>
-    <div class="background"></div>
-    
-    <header class="navbar">
-        <div class="nav-left">
-            <div class="logo">joonas<span>.</span></div>
-            <div class="lang-switcher">
-                <button class="lang-btn" data-lang="fi">FI</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav class="nav-links" id="navLinks">
-            <a onclick="closeMenu()" data-i18n="nav.home" href="main.html"></a>
-            <a onclick="closeMenu()" data-i18n="nav.work"></a>
-            <a onclick="closeMenu()" data-i18n="nav.skills"></a>
-            <a onclick="closeMenu()" data-i18n="nav.contact" href="contact.html"></a>
-        </nav>
-    </header>
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="bg-grid"></div>
+  </div>
 
+  <!-- Navigation -->
+  <nav>
     <div class="container">
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 data-i18n="hero.greeting"></h1>
-                    <div class="subtitle" data-i18n="hero.subtitle"></div>
-                    <p data-i18n="hero.description"></p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" data-i18n="hero.cta1"></button>
-                        <button class="btn btn-secondary" data-i18n="hero.cta2"></button>
-                    </div>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label" data-i18n="stats.projects"></span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label" data-i18n="stats.years"></span>
-                        </div> 
-                        <!--
-                        <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label" data-i18n="stats.clients"></span>
-                        </div>-->
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="tech-stack">
-                        <div class="tech-card">
-                            <h3>Frontend</h3>
-                            <p>React, TypeScript, JavaScript, HTML</p>
-                        </div>
-                        <div class="tech-card">
-                            <h3>Backend</h3>
-                            <p>Node.js, Python, C#, .NET</p>
-                        </div>
-                        <div class="tech-card">
-                            <h3>Databases</h3>
-                            <p>PostgreSQL, MongoDB, SQL</p>
-                        </div>
-                        <div class="tech-card">
-                            <h3 data-i18n="tech.other"></h3>
-                            <p>Git, Docker, AWS, CI/CD</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <a href="index.html" class="logo">&lt;/Joonas&gt;</a>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <script type="module" src="./scripts/main.js"></script>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="title">Software Developer<br/> & Data Analyst</h1>
+        <p class="hero-subtitle" data-i18n="subtitle">// Building scalable applications with modern technologies</p>
+        <p class="hero-description" data-i18n="description">
+          Information and communication technology engineer specializing in application development and data analytics. 
+          Self-starter and solution-oriented programmer with a passion for taking on challenges.
+        </p>
+        <div class="cta-buttons">
+          <a href="experience.html" class="btn btn-primary" data-i18n="viewWork">View My Work</a>
+          <a href="contact.html" class="btn btn-secondary" data-i18n="getInTouch">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 1rem">
+    <div class="container">
+      <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
+      <p class="section-subtitle" data-i18n="aboutSubtitle">// Who I am and what I do</p>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">💻</div>
+          <h3 class="card-title" data-i18n="fullStackTitle">Full Stack Development</h3>
+          <p class="card-description" data-i18n="fullStackDesc">
+            Experienced in building complete web applications using modern frameworks like React, Node.js, and Python.
+            Proficient in both frontend and backend development with a focus on clean, maintainable code.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3 class="card-title" data-i18n="dataAnalyticsTitle">Data Analytics</h3>
+          <p class="card-description" data-i18n="dataAnalyticsDesc">
+            Skilled in data analysis and visualization using Python libraries like Pandas, NumPy, and TensorFlow. 
+            Experience in building data-driven solutions that provide actionable insights.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <h3 class="card-title" data-i18n="devopsTitle">DevOps & Cloud</h3>
+          <p class="card-description" data-i18n="devopsDesc">
+            Hands-on experience with Docker and AWS for continuous integration and deployment. 
+            Comfortable managing Linux-based servers and databases in production environments.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 4rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+          <span data-i18n="aboutText">I'm a self-starter who thrives on solving complex problems and building innovative solutions. 
+          My experience spans from creating ERP systems to developing automated communication tools. 
+          Strong character traits from my competitive sports background are:</span>
+          <span style="color: var(--accent); font-weight: 600;" data-i18n="sociability">sociability</span>, 
+          <span style="color: var(--accent); font-weight: 600;" data-i18n="conscientiousness">conscientiousness</span>, and 
+          <span style="color: var(--accent); font-weight: 600;" data-i18n="goalOriented">goal-orientedness</span>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats Section -->
+  <section id="stats" style="background: var(--bg-secondary); padding: 4rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">2+</div>
+          <div style="color: var(--text-secondary);" data-i18n="statsYears">Years Experience</div>
+        </div>
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">10+</div>
+          <div style="color: var(--text-secondary);" data-i18n="statsTech">Technologies</div>
+        </div>
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">5+</div>
+          <div style="color: var(--text-secondary);" data-i18n="statsProjects">Projects Completed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">© 2025 Joonas</p>
+        <div class="social-links">
+          <a href="https://github.com/Joolahi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/joonas-lahti-279766258/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:lahti.joonas@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/language.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
