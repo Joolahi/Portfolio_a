@@ -7,6 +7,7 @@
   <title>Contact - Software Developer</title>
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="scripts/translations.js"></script>
 </head>
 <body>
   <!-- Background Animation -->
@@ -17,7 +18,7 @@
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <a href="index.html" class="logo">&lt;/dev&gt;</a>
+      <a href="index.html" class="logo">&lt;/Joonas&gt;</a>
       <button class="mobile-menu-btn">
         <span></span>
         <span></span>
@@ -36,15 +37,15 @@
   <!-- Contact Section -->
   <section style="padding-top: 150px;">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">// Let's work together</p>
+      <h2 class="section-title" data-i18n="title">Get In Touch</h2>
+      <p class="section-subtitle" data-i18n="subtitle">// Let's work together</p>
 
       <div class="contact-grid">
         <!-- Contact Information -->
         <div class="contact-info">
           <div style="margin-bottom: 2rem;">
-            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Let's Connect</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="connectTitle">Let's Connect</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem;" data-i18n="connectDesc">
               I'm always interested in hearing about new opportunities, collaborations, or just having 
               a conversation about technology and development. Feel free to reach out!
             </p>
@@ -55,7 +56,7 @@
               <i class="fas fa-envelope"></i>
             </div>
             <div class="contact-details">
-              <h3>Email</h3>
+              <h3 data-i18n="email">Email</h3>
               <a href="mailto:lahti.joonas@outlook.com">lahti.joonas@outlook.com</a>
             </div>
           </div>
@@ -65,8 +66,8 @@
               <i class="fas fa-phone"></i>
             </div>
             <div class="contact-details">
-              <h3>Phone</h3>
-              <a href="tel:+358401234567">+358 40 4113163</a>
+              <h3 data-i18n="phone">Phone</h3>
+              <a href="tel:+358404113163">+358 40 4113163</a>
             </div>
           </div>
 
@@ -75,8 +76,8 @@
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <div class="contact-details">
-              <h3>Location</h3>
-              <p>Finland</p>
+              <h3 data-i18n="location">Location</h3>
+              <p data-i18n="locationValue">Finland</p>
             </div>
           </div>
 
@@ -85,8 +86,8 @@
               <i class="fab fa-linkedin"></i>
             </div>
             <div class="contact-details">
-              <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/joonas-lahti-279766258" target="_blank" rel="noopener noreferrer">Connect with me</a>
+              <h3 data-i18n="linkedin">LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/joonas-lahti-279766258" target="_blank" rel="noopener noreferrer" data-i18n="linkedinText">Connect with me</a>
             </div>
           </div>
 
@@ -95,8 +96,8 @@
               <i class="fab fa-github"></i>
             </div>
             <div class="contact-details">
-              <h3>GitHub</h3>
-              <a href="https://github.com/Joolahi" target="_blank" rel="noopener noreferrer">View my repositories</a>
+              <h3 data-i18n="github">GitHub</h3>
+              <a href="https://github.com/Joolahi" target="_blank" rel="noopener noreferrer" data-i18n="githubText">View my repositories</a>
             </div>
           </div>
         </div>
@@ -105,47 +106,47 @@
         <div>
           <form class="contact-form">
             <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Your name">
+              <label for="name" data-i18n="nameLabel">Name *</label>
+              <input type="text" id="name" name="name" required data-i18n="namePlaceholder" placeholder="Your name">
             </div>
 
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+              <label for="email" data-i18n="emailLabel">Email *</label>
+              <input type="email" id="email" name="email" required data-i18n="emailPlaceholder" placeholder="your.email@example.com">
             </div>
 
             <div class="form-group">
-              <label for="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+              <label for="subject" data-i18n="subjectLabel">Subject *</label>
+              <input type="text" id="subject" name="subject" required data-i18n="subjectPlaceholder" placeholder="What's this about?">
             </div>
 
             <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" required placeholder="Tell me about your project or idea..."></textarea>
+              <label for="message" data-i18n="messageLabel">Message *</label>
+              <textarea id="message" name="message" required data-i18n="messagePlaceholder" placeholder="Tell me about your project or idea..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="sendButton">
               Send Message
             </button>
           </form>
 
           <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;">
             <i class="fas fa-info-circle" style="color: var(--accent);"></i>
-            I typically respond within 24-48 hours
+            <span data-i18n="responseTime">I typically respond within 24-48 hours</span>
           </p>
         </div>
       </div>
 
       <!-- Additional Information -->
       <div style="margin-top: 5rem;">
-        <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--text-primary); text-align: center;">
+        <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--text-primary); text-align: center;" data-i18n="whyWorkTitle">
           Why Work With Me?
         </h3>
         <div class="card-grid">
           <div class="card">
             <div class="card-icon">🎯</div>
-            <h4 class="card-title">Goal-Oriented</h4>
-            <p class="card-description">
+            <h4 class="card-title" data-i18n="goalOrientedTitle">Goal-Oriented</h4>
+            <p class="card-description" data-i18n="goalOrientedDesc">
               I approach every project with clear objectives and a commitment to delivering results 
               that exceed expectations. My focus is on creating solutions that truly solve problems.
             </p>
@@ -153,8 +154,8 @@
 
           <div class="card">
             <div class="card-icon">🤝</div>
-            <h4 class="card-title">Collaborative</h4>
-            <p class="card-description">
+            <h4 class="card-title" data-i18n="collaborativeTitle">Collaborative</h4>
+            <p class="card-description" data-i18n="collaborativeDesc">
               Strong communicator who values teamwork and believes the best solutions come from 
               collaboration. I work well with diverse teams and stakeholders.
             </p>
@@ -162,8 +163,8 @@
 
           <div class="card">
             <div class="card-icon">⚡</div>
-            <h4 class="card-title">Efficient</h4>
-            <p class="card-description">
+            <h4 class="card-title" data-i18n="efficientTitle">Efficient</h4>
+            <p class="card-description" data-i18n="efficientDesc">
               I write clean, maintainable code and follow best practices to ensure projects are 
               delivered on time without compromising quality or scalability.
             </p>
@@ -171,8 +172,8 @@
 
           <div class="card">
             <div class="card-icon">📚</div>
-            <h4 class="card-title">Continuous Learner</h4>
-            <p class="card-description">
+            <h4 class="card-title" data-i18n="learnerTitle">Continuous Learner</h4>
+            <p class="card-description" data-i18n="learnerDesc">
               Technology evolves rapidly, and I'm committed to staying current. I actively learn 
               new tools and techniques to bring the best solutions to every project.
             </p>
@@ -180,8 +181,8 @@
 
           <div class="card">
             <div class="card-icon">💡</div>
-            <h4 class="card-title">Problem Solver</h4>
-            <p class="card-description">
+            <h4 class="card-title" data-i18n="problemSolverTitle">Problem Solver</h4>
+            <p class="card-description" data-i18n="problemSolverDesc">
               Not afraid to tackle complex challenges. I approach problems analytically and 
               creatively to find elegant solutions that work.
             </p>
@@ -189,8 +190,8 @@
 
           <div class="card">
             <div class="card-icon">🔒</div>
-            <h4 class="card-title">Reliable</h4>
-            <p class="card-description">
+            <h4 class="card-title" data-i18n="reliableTitle">Reliable</h4>
+            <p class="card-description" data-i18n="reliableDesc">
               I am conscientious and reliable, 
               I take responsibility for my work and ensure that projects are completed within the agreed time frame.
             </p>
@@ -200,21 +201,21 @@
 
       <!-- Call to Action -->
       <div style="margin-top: 5rem; background: var(--bg-secondary); padding: 4rem 3rem; border-radius: 8px; border: 1px solid rgba(169, 29, 58, 0.2); text-align: center;">
-        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="ctaTitle">
           Ready to Start a Project?
         </h3>
-        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;" data-i18n="ctaDesc">
           Whether you have a specific project in mind or just want to explore possibilities, 
           I'd love to hear from you. Let's create something amazing together.
         </p>
         <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-          <a href="mailto:your.email@example.com" class="btn btn-primary">
+          <a href="mailto:lahti.joonas@outlook.com" class="btn btn-primary">
             <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
-            Email Me
+            <span data-i18n="emailMe">Email Me</span>
           </a>
           <a href="https://www.linkedin.com/in/joonas-lahti-279766258" target="_blank" class="btn btn-secondary">
             <i class="fab fa-linkedin" style="margin-right: 0.5rem;"></i>
-            Connect on LinkedIn
+            <span data-i18n="connectLinkedIn">Connect on LinkedIn</span>
           </a>
         </div>
       </div>
@@ -223,7 +224,7 @@
       <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(169, 29, 58, 0.1); border-radius: 8px; border: 1px solid rgba(169, 29, 58, 0.3);">
         <div style="display: inline-flex; align-items: center; gap: 1rem;">
           <div style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--text-primary);">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--text-primary);" data-i18n="availabilityStatus">
             Currently available for new opportunities
           </span>
         </div>
@@ -245,6 +246,7 @@
     </div>
   </footer>
 
+  <script src="scripts/language.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

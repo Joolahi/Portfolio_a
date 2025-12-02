@@ -1,4 +1,3 @@
-// Language Switcher
 class LanguageSwitcher {
   constructor() {
     this.currentLang = this.getInitialLanguage();
@@ -11,10 +10,8 @@ class LanguageSwitcher {
     if (stored && (stored === 'en' || stored === 'fi')) {
       return stored;
     }
-
     // Detect browser language
-    const browserLang = navigator.language || navigator.userLanguage;
-    
+    const browserLang = navigator.language || navigator.userLanguage;    
     // If browser is set to Finnish, use Finnish, otherwise default to English
     if (browserLang.startsWith('fi')) {
       return 'fi';
@@ -24,13 +21,8 @@ class LanguageSwitcher {
   }
 
   init() {
-    // Apply language immediately
     this.applyLanguage();
-    
-    // Create and add language toggle button
     this.createLanguageToggle();
-    
-    // Add event listeners
     this.attachEventListeners();
   }
 
@@ -140,6 +132,14 @@ class LanguageSwitcher {
 
   // Typing effect function
   typeWriter(element, text) {
+    // Cancel any existing typing animation
+    if (this.typingTimeout) {
+      clearTimeout(this.typingTimeout);
+    }
+    if (this.typingAnimation) {
+      clearTimeout(this.typingAnimation);
+    }
+    
     element.textContent = '';
     element.style.opacity = '1';
     let i = 0;
@@ -148,11 +148,11 @@ class LanguageSwitcher {
       if (i < text.length) {
         element.textContent += text.charAt(i);
         i++;
-        setTimeout(type, 50);
+        this.typingAnimation = setTimeout(type, 50);
       }
     };
     
-    setTimeout(type, 100);
+    this.typingTimeout = setTimeout(type, 100);
   }
 
   // Helper method to get translated text

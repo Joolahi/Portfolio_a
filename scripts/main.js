@@ -98,9 +98,7 @@ if (contactForm) {
     const name = formData.get('name');
     const email = formData.get('email');
     const message = formData.get('message');
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show an alert
+    //  Logic to handle form submission (e.g., send email), just now alert!!!
     alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
     
     // Reset form
@@ -145,7 +143,6 @@ skillTags.forEach(tag => {
   });
 });
 
-// Parallax effect for background grid
 let ticking = false;
 let scrollY = 0;
 
